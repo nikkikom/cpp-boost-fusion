@@ -10,7 +10,8 @@
 #include <boost/config.hpp>
 #include <boost/utility/result_of.hpp>
 
-#if !defined(BOOST_RESULT_OF_USE_DECLTYPE) || defined(BOOST_NO_CXX11_VARIADIC_TEMPLATES)
+#if (!defined(BOOST_RESULT_OF_USE_TR1_WITH_DECLTYPE_FALLBACK) \
+           && !defined(BOOST_RESULT_OF_USE_DECLTYPE)) || defined(BOOST_NO_CXX11_VARIADIC_TEMPLATES)
 #define BOOST_FUSION_NO_DECLTYPE_BASED_RESULT_OF
 #endif
 
